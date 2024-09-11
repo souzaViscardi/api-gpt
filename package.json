@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
-    "start": "babel src -d lib && node lib/server.js",
+    "start": "node lib/server.js",
     "dev": "nodemon --legacy-watch"
   },
   "author": "",
