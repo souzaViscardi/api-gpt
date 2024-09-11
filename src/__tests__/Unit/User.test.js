@@ -1,11 +1,8 @@
-import UserService from '../services/User'; 
-import User from '../database/models/User.js';
+import UserService from '../../services/User.js'; 
+import User from '../../database/models/User.js';
 jest.mock('mongoose');
-const mockSave = jest.fn();
-const mockFindOne = jest.fn();
-const mockFind = jest.fn();
 
-jest.mock('../database/models/User', () => {
+jest.mock('../../database/models/User', () => {
   const mockSave = jest.fn();
   const mockFindById = jest.fn();
   const mockFindOne = jest.fn();

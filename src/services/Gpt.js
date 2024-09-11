@@ -24,7 +24,6 @@ export default class GptService{
             }
             await userService.saveGptIteration(data)
             return content
-            console.log(chat)
         } catch (error) {
             throw new Error(`Error in simpleAsk: ${error.message}`);
         }

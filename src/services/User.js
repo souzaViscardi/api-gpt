@@ -33,11 +33,10 @@ export default class UserService {
           gtpResponse: resposnse
       };
         return await User.updateOne(filtro, { $push: { gptIteration: gptIteration } });
-      } catch (err) {
+      } catch (error) {
         throw new Error(`Error in update user by email: ${error.message}`);
       }
     }
-    
-  }
+}
   
 

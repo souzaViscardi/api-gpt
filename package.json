@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
-    "start": "nodemon"
+    "start": "nodemon --legacy-watch"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +19,7 @@
     "express": "^4.20.0",
     "jest": "^29.7.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.0.0",
     "openai": "^4.58.2"
   },
   "devDependencies": {
