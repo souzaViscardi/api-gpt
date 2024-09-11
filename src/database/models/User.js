@@ -5,7 +5,7 @@ const userSchema = new mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   phone:{ type: String, required: true },
-  gptIteration: { type: GptIterationsSchema, required:false }
+  gptIteration: [GptIterationsSchema]
 });
 
 const User = mongoose.model('users', userSchema);

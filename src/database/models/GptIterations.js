@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const GptIterationsSchema = new mongoose.Schema({
-  userQuestion: { type: String, required: true },
-  gtpResponse: { type: String, required: true },
+  userQuestion: { type: String },
+  gtpResponse: { type: String },
 });
 
 export default GptIterationsSchema;

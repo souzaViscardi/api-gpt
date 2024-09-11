@@ -25,26 +25,19 @@ export default class UserService {
         throw new Error(`Error finding user by email: ${error.message}`);
       }
     }
-     async findUserById(userId) {
+    async  saveGptIteration({email, ask, resposnse}) {
       try {
-        const user = await User.find(userId);
-        if (!user) {
-          throw new Error('User not found');
-        }
-        return user;
-      } catch (error) {
-        throw new Error(`Error finding user: ${error.message}`);
+        const filtro = {email};
+        const gptIteration = { 
+          userQuestion: ask,
+          gtpResponse: resposnse
+      };
+        return await User.updateOne(filtro, { $push: { gptIteration: gptIteration } });
+      } catch (err) {
+        throw new Error(`Error in update user by email: ${error.message}`);
       }
     }
-  
-     async listUsers() {
-      try {
-        const users = await User.find();
-        return users;
-      } catch (error) {
-        throw new Error(`Error listing users: ${error.message}`);
-      }
-    }
+    
   }
   
 

@@ -5,7 +5,9 @@ let ajv = new Ajv({ allErrors:true, removeAdditional:'all' })
 addFormats(ajv)
 
 import userSchema from '../schemas/userSchema.js'
+import { gptIterationSchema } from '../schemas/gptSchema.js'
 ajv.addSchema(userSchema, 'new-user')
+ajv.addSchema(gptIterationSchema, 'gpt-iteration')
 
 /**
  * Format error responses
