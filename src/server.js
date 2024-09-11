@@ -5,10 +5,8 @@ import bodyParser from 'body-parser';
 import routes from "./routes/index.js"
 import Jwt from "./services/Jwt.js"
 import auth from './middlewares/auth.js';
-const {
-  APP_PORT
-} = process.env;
-const PORT = APP_PORT || 3000;
+
+const PORT = process.env.PORT || 3000;
 connectDB();
 const app = express();
 app.use(bodyParser.json())
