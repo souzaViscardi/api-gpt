@@ -1,5 +1,5 @@
-import UserService from '../../services/User';
-import GptService from '../../services/Gpt';
+import UserService from '../../src/services/User';
+import GptService from '../../src/services/Gpt';
 describe('simpleAsk', () => {
     let gptService;
     let mockOpenAiChatCompletion;

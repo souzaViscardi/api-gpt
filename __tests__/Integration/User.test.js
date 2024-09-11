@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import User from '../../database/models/User.js';
-import UserService from '../../services/User.js';
+import User from '../../src/database/models/User.js';
+import UserService from '../../src/services/User.js';
 
 describe('UserService Integration Tests', () => {
   let userService;

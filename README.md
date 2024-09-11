@@ -17,7 +17,7 @@ api/gpt POST
 conecta com o gpt enviando uma pergunta e guardando sua resposta na collection do usuario requisitado é obrigatorio enviar o email do usuario
  
 TESTES
-foram feitos testes unitarios e testes de integracao estao todos em src/__tests__ 
+foram feitos testes unitarios e testes de integracao estao todos em /__tests__ 
 
 Mddleweres
     ValidateSchema

@@ -1,8 +1,8 @@
-import GptService from '../../services/Gpt';
+import GptService from '../../src/services/Gpt';
 import OpenAI from 'openai';
-import UserService from '../../services/User';
+import UserService from '../../src/services/User';
 
-jest.mock('../../services/User');
+jest.mock('../../src/services/User');
 jest.mock("openai")
 const mockSaveGptIteration = jest.fn();
 
