@@ -11,4 +11,4 @@ RUN npm install
 
 COPY . .
 
-CMD ["npm", "run", "master"]
+CMD ["npm", "start"]

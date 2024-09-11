@@ -6,8 +6,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d lib",
-    "master":"node -r @babel/register src/server.js",
-    "start": "nodemon --legacy-watch"
+    "start":"node -r @babel/register src/server.js",
+    "dev": "nodemon --legacy-watch"
   },
   "author": "",
   "license": "ISC",
