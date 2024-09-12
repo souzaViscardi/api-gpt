@@ -49,7 +49,10 @@ jobs:
 
     - name: Add Heroku Remote
       run: |
-        git remote add heroku https://github.com/souzaViscardi/kenlo.git
+        git remote -v
+
+      run: |
+        git remote add heroku https://git.heroku.com/gptuserapi.git
 
     - name: Deploy to Heroku
       run: |
