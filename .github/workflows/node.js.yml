@@ -36,16 +36,20 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Git
+    - name: Set up Heroku CLI
       run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
+        curl https://cli-assets.heroku.com/install.sh | sh
+        heroku --version
 
-    - name: Add Heroku Remote
+    - name: Log in to Heroku
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        git remote add heroku https://$HEROKU_API_KEY:@git.heroku.com/gptuserapi.git
+        echo $HEROKU_API_KEY | heroku auth:token
+
+    - name: Add Heroku Remote
+      run: |
+        git remote add heroku https://git.heroku.com/gptuserapi.git
 
     - name: Deploy to Heroku
       run: |
