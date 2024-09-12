@@ -16,7 +16,6 @@ let gptIterations = Router()
  *   post:
  *     summary: Cria uma interação com GPT
  *     tags: [GPT Iterations]
- *     authentication
  *     requestBody:
  *       required: true
  *       content:
