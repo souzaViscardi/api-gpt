@@ -20,7 +20,7 @@ export default class GptService{
                 email: user.email, 
                 ask: user.message, 
                 resposnse: content
-            }
+            };
             await userService.saveGptIteration(data)
             return content
         } catch (error) {
