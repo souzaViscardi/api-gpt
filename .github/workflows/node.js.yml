@@ -47,10 +47,11 @@ jobs:
       run: |
         echo $HEROKU_API_KEY | heroku auth:token
 
-    - name: Add Heroku Remote
+    - name: check remote
       run: |
         git remote -v
-
+        
+    - name: Add Heroku Remote
       run: |
         git remote add heroku https://git.heroku.com/gptuserapi.git
 
