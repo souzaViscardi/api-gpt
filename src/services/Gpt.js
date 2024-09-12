@@ -21,7 +21,7 @@ export default class GptService{
                 ask: user.message, 
                 resposnse: content
             }
-            await userService.saveGptIteration(data);
+            await userService.saveGptIteration(data)
             return content
         } catch (error) {
             throw new Error(`Error in simpleAsk: ${error.message}`);
