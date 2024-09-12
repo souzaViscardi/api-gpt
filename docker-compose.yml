@@ -30,7 +30,7 @@ services:
         networks:
             - app-network
         ports:
-            - ${APP_PORT}:${APP_PORT}
+            - ${PORT}:${PORT}
         command: npm run start
         restart: always
 networks:
