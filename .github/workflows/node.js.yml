@@ -49,7 +49,7 @@ jobs:
 
     - name: Add Heroku Remote
       run: |
-        heroku git:remote -a gptuserapi
+        git remote add heroku https://git.heroku.com/gptuserapi.git
 
     - name: Deploy to Heroku
       run: |
