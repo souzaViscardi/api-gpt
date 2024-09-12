@@ -51,6 +51,10 @@ jobs:
       run: |
         git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/gptuserapi.git
 
+    - name: Unshallow remote
+      run: |
+        git fetch --unshallow origin
+
     - name: Deploy to Heroku
       run: |
         git push heroku
