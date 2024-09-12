@@ -7,7 +7,8 @@
     "test": "jest",
     "build": "babel src -d lib",
     "start": "node lib/server.js",
-    "dev": "nodemon --legacy-watch"
+    "dev": "nodemon --legacy-watch",
+    "prestart": "npm run build"
   },
   "author": "",
   "license": "ISC",
