@@ -1,4 +1,7 @@
-# kenlo
+# kenlo 
+# link de prod
+https://gptuserapi-0271d233bfa0.herokuapp.com/api-docs/
+
 COMO INICIAR O APP
     Obrigatorio ter docker instalado!
     no cmd da raiz do projeto rode os seguintes comandos:
